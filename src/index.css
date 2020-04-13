@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body {
+  font-family: Oswald;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  margin: 100px 100px 100px 100px;
+  background-color: #9d5c63;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+p {
+  color: #d6e3f8;
+}
+
+.btn {
+  background-color: #e4bb97;
+  border-color: #e4bb97;
+  color: lemonchiffon;
+}
