@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/film-app/static/css/main.de521153.chunk.css",
-    "main.js": "/film-app/static/js/main.2fd6daf5.chunk.js",
-    "main.js.map": "/film-app/static/js/main.2fd6daf5.chunk.js.map",
-    "runtime-main.js": "/film-app/static/js/runtime-main.2204b300.js",
-    "runtime-main.js.map": "/film-app/static/js/runtime-main.2204b300.js.map",
-    "static/js/2.02013937.chunk.js": "/film-app/static/js/2.02013937.chunk.js",
-    "static/js/2.02013937.chunk.js.map": "/film-app/static/js/2.02013937.chunk.js.map",
-    "index.html": "/film-app/index.html",
-    "precache-manifest.7508a4132745d5ac82d8ef1c8f0a182e.js": "/film-app/precache-manifest.7508a4132745d5ac82d8ef1c8f0a182e.js",
-    "service-worker.js": "/film-app/service-worker.js",
-    "static/css/main.de521153.chunk.css.map": "/film-app/static/css/main.de521153.chunk.css.map",
-    "static/js/2.02013937.chunk.js.LICENSE.txt": "/film-app/static/js/2.02013937.chunk.js.LICENSE.txt"
+    "main.css": "/foreign-language-films/static/css/main.de521153.chunk.css",
+    "main.js": "/foreign-language-films/static/js/main.c2a7898d.chunk.js",
+    "main.js.map": "/foreign-language-films/static/js/main.c2a7898d.chunk.js.map",
+    "runtime-main.js": "/foreign-language-films/static/js/runtime-main.b0d3631c.js",
+    "runtime-main.js.map": "/foreign-language-films/static/js/runtime-main.b0d3631c.js.map",
+    "static/js/2.5d6c966f.chunk.js": "/foreign-language-films/static/js/2.5d6c966f.chunk.js",
+    "static/js/2.5d6c966f.chunk.js.map": "/foreign-language-films/static/js/2.5d6c966f.chunk.js.map",
+    "index.html": "/foreign-language-films/index.html",
+    "precache-manifest.cf7568a439158b75fa7f3de33339d8b6.js": "/foreign-language-films/precache-manifest.cf7568a439158b75fa7f3de33339d8b6.js",
+    "service-worker.js": "/foreign-language-films/service-worker.js",
+    "static/css/main.de521153.chunk.css.map": "/foreign-language-films/static/css/main.de521153.chunk.css.map",
+    "static/js/2.5d6c966f.chunk.js.LICENSE.txt": "/foreign-language-films/static/js/2.5d6c966f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2204b300.js",
-    "static/js/2.02013937.chunk.js",
+    "static/js/runtime-main.b0d3631c.js",
+    "static/js/2.5d6c966f.chunk.js",
     "static/css/main.de521153.chunk.css",
-    "static/js/main.2fd6daf5.chunk.js"
+    "static/js/main.c2a7898d.chunk.js"
   ]
 }
