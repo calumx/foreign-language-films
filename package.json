@@ -1,14 +1,13 @@
 {
-  "homepage": "https://calumx.github.io/foreign-language-films",
-  "name": "film-app",
+  "name": "foreign-language-films",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
+    "netlify-cli": "^2.68.7",
     "react": "^16.13.1",
     "react-animated-progress-bar": "^1.0.4",
     "react-bootstrap": "^1.0.0",
@@ -21,9 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +38,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0"
+    "@octokit/core": "^3.2.1",
+    "@popperjs/core": "^2.5.4",
+    "popper.js": "^1.16.0"
   }
 }

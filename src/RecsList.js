@@ -1,27 +1,20 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import './custom.css';
 
-function RecsList(props) {
-  const [blah, setBlah] = useState('');
-  const [blurb, setBlurb] = useState('');
+function RecsList() {
+  const [recTitle, setRecTitle] = useState('');
+  const [recBlurb, setRecBlurb] = useState('');
 
-  if (blah === '') {
-    axios
-      .get(
-        'https://api.themoviedb.org/3/list/138980?api_key=d1e40fddb73df31e61693cbf7ef094aa'
-      )
-      .then((x) => {
-        let filmNum = Math.floor(Math.random() * x.data.item_count);
-        console.log(x.data);
-        setBlurb('"' + x.data.items[filmNum]['overview'] + '"');
-        setBlah(x.data.items[filmNum]['title'] + '?');
-      });
+  if (recTitle === '') {
+    //Make GET request to your recommendations list then
+    //Generate random number to serve as index of film from list (I used res.data.item_count to get the length of the list)
+    //setRecTitle and setRecBlurb appropriately (eg. res.data.items[index]['title'], res.data.iems[index]['overview'])
   }
 
   return (
     <div>
-      <p>{blah}</p>
-      <p>{blurb}</p>
+      <p className="popover-title">{recTitle}</p>
+      <p className="blurb">{recBlurb}</p>
     </div>
   );
 }

@@ -6,6 +6,7 @@ class FilmInfo extends React.Component {
     super(props);
     this.state = {
       fill: 0,
+      hidden: true,
     };
   }
 
@@ -14,6 +15,7 @@ class FilmInfo extends React.Component {
       this.setState({ fill: this.props.percentage });
     }
   }
+
   render() {
     return (
       <div>

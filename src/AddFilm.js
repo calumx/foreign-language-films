@@ -15,7 +15,7 @@ class AddFilm extends React.Component {
           key="bottom"
           placement="bottom"
           overlay={
-            <Popover id="popover-positioned-bottom">
+            <Popover id="popover-positioned-bottom" style={{ margin: 0 }}>
               <Popover.Title as="h3">Search film</Popover.Title>
               <Popover.Content>
                 <FilmSearch updater={this.props.updater} />

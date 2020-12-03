@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import './custom.css';
 import FilmInfo from './FilmInfo';
 import Recommend from './Recommend';
@@ -11,11 +10,8 @@ export default class Tmdb extends React.Component {
     this.refresher = this.refresher.bind(this);
   }
 
-  i = 2;
+  pageNum = 2;
   apiData = [];
-
-  url =
-    'https://api.themoviedb.org/3/account/{account_id}/watchlist/movies?api_key=d1e40fddb73df31e61693cbf7ef094aa&session_id=d38ef9ba5672c0c9660f9bdd47b123bf609c2a13';
 
   state = {
     foreignFilms: [],
@@ -24,33 +20,33 @@ export default class Tmdb extends React.Component {
   };
 
   getAllPages() {
-    axios.get(this.url + '&page=' + this.i).then((x) => {
-      this.apiData.push(...x.data.results);
-      this.i++;
-      if (this.i <= x.data.total_pages) {
-        this.getAllPages();
-      } else this.organiseData();
-    });
+    //Make GET request to your watchlist and append "?page=" + this.pageNum
+    //Spread results into apiData eg. this.apiData.push(...res.data.results)
+    //Increment this.pageNum
+    //if (this.pageNum <= res.data.total_pages) i.e. if there are still more pages to get then
+    //this.getAllPages() - call function again to get the other pages
+    //else this.organiseData() - prepare data for render.
   }
 
   componentDidMount() {
-    axios.get(this.url).then((x) => {
-      this.apiData.push(...x.data.results);
-      if (this.i <= x.data.total_pages) {
-        this.getAllPages();
-      }
-    });
+    //Make GET request to your watchlist then
+    //Spread results into apiData eg. this.apiData.push(...res.data.results)
+    //if (this.pageNum <== res.data.total_pages) i.e. if your watchlist is spread across multiple pages then
+    //this.getAllPages() - call function to get the other pages
+    //else this.organiseData() - prepare data for render.
   }
 
   refresher = () => {
-    axios.get(this.url + '&sort_by=created_at.desc').then((x) => {
-      this.apiData.push(x.data.results[0]);
-      this.organiseData();
-    });
+    //Make GET request to your watchlist and append "?sort_by=created_at.desc"
+    //This ensures most recently added film will be the first entry.
+    //So push it into apiData e.g. this.apiData.push(res.data.results[0])
+    //Call this.organiseData() - prepare data for render.
   };
 
   organiseData() {
-    let foreignFilms = this.apiData.filter((z) => z.original_language !== 'en');
+    let foreignFilms = this.apiData.filter(
+      (film) => film.original_language !== 'en'
+    );
     let englishFilms = this.apiData.filter(
       (eng) => eng.original_language === 'en'
     );
